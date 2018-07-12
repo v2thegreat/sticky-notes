@@ -16,6 +16,9 @@
 
 * Review documentation for all
 
+* Add unit tests
+	* Decided to write it after all
+
 <hr>
 #### All new features beyond this point are not to be completed until the file has been uploaded to GitHub and all TODO's are completed
 
@@ -36,10 +39,6 @@
 
 <hr>
 ## Done:
-
-* Add unit tests
-	* Decided not to include unit tests
-
 
 * Refactor to break down Backend into smaller classes
 	* Broke down the Backend Classes into the following classes:
