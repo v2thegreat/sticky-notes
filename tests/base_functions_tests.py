@@ -56,10 +56,7 @@ class base_functions_unit_test(TestCase, base_functions):
         from test_outputs.checksForPossibleTitle import expected_outputs
 
         for pos, input in enumerate(test_inputs):
-            try:
-                assert self._checksForPossibleTitle(input) == expected_outputs[pos]
-            except AssertionError:
-                print(input, self._checksForPossibleTitle(input), expected_outputs[pos])
+            assert self._checksForPossibleTitle(input) == expected_outputs[pos]
 
 
 if __name__ == '__main__':
