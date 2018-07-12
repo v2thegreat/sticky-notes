@@ -1,0 +1,2 @@
+DFLT_FILE_NAME_FORMAT = "Note-{0}.{1}"
+DFLT_TIME_STAMP_FORMAT = "%Y-%m-%d ~ %H:%M:%S"
