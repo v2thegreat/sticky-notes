@@ -1,9 +1,10 @@
 from os import remove, listdir
+import re
 
 if __name__ == '__main__':
     if 'notesCount.txt' in listdir():
-        remove('notesCount.txt')
+        print('notesCount.txt')
 
     for x in listdir():
     	if 'Note-' in x:
-    		remove(x)
+    		print(x)
