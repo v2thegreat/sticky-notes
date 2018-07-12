@@ -7,7 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from Defaults import *
+from Defaults.UI_Defaults import *
 
 
 class stickyNotesUI(object):

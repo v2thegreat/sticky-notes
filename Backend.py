@@ -1,7 +1,7 @@
 from os import startfile, stat
 from time import sleep, gmtime, strftime
 from PyQt5 import QtWidgets
-from Defaults import *
+from Defaults.UI_Defaults import *
 from UI import stickyNotesUI
 from markdown_functionality import markdown_functionality
 from threading_functions import threading_functions
