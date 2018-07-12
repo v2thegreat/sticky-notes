@@ -2,6 +2,9 @@
 
 * Add reference to author of the eye design: [here](https://www.flaticon.com/authors/freepik)
 
+* Change os.startfile to something that is platform independent, to ensure that it runs on linux and mac
+	* Fix 1: [Check out this link](https://stackoverflow.com/questions/17317219/is-there-an-platform-independent-equivalent-of-os-startfile)
+
 * Add a feature that stops adding dates if there's a date already in the last line
 
 	* Fix 1: Check the last few lines of the document to see if the datetime stamp is present
@@ -14,7 +17,9 @@
 * Review documentation for all
 
 <hr>
-#### All new features beyond this point are not to be completed until the file has been uploaded to GitHub
+#### All new features beyond this point are not to be completed until the file has been uploaded to GitHub and all TODO's are completed
+
+* Add a passive mode
 
 * Refactor checksForPossibleTitle
 
