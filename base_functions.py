@@ -1,33 +1,36 @@
 from time import sleep, gmtime, strftime
-
+from Defaults.base_functions import *
 
 class base_functions(object):
-	"""Seperate Class for base functions"""
+	"""Base Functions
+	This Class Contains functions that are inherited by the Backend class"""
 	def __init__(self):
 		super(base_functions, self).__init__()
 
 
 	@staticmethod
-	def _getFileName(index_val = None, file_format = 'md'):
+	def _getFileName(index_val, file_format = 'md'):
 		"""
 		This function estimates what the name needs to be for the new file by the parameters and how many notes are there
 
 		Args:
-			index_val = None (int or None):
+			index_val (int):
 				This is the index position of the label that you want to get the file name of.
-				Incase no parameter is passed(index_val = None), the self.notesCount property is used to calculate the file name
+
+			file_format (str):
+				This is the parameter that generates the
 		"""
 		if index_val != None:
-			return "Note-{0}.{1}".format(index_val, file_format)
+			return DFLT_FILE_NAME_FORMAT.format(index_val, file_format)
 
 
 	@staticmethod
 	def _getDateTimeStamp(addNewLine = True):
 		if addNewLine:
-			return '\n###### {}'.format(strftime("%Y-%m-%d ~ %H:%M:%S", gmtime()))
+			return '\n###### {}'.format(strftime(DFLT_TIME_STAMP_FORMAT, gmtime()))
 
 		else:
-			return '{}'.format(strftime("%Y-%m-%d ~ %H:%M:%S", gmtime()))
+			return '{}'.format(strftime(DFLT_TIME_STAMP_FORMAT, gmtime()))
 
 
 	@staticmethod
@@ -69,8 +72,5 @@ class base_functions(object):
 		return ch1 * ch2
 
 if __name__ == '__main__':
-	test = base_functions()
-	print(test._getFileName(1, 'HTML'))
-	print(test._getDateTimeStamp())
-	print(test._getLabelTitle(0))
-	print('All tests Ran successfully...')
+	from tests.base_functions_tests import *
+	main(base_functions_unit_test.run())
