@@ -1,5 +1,7 @@
 from time import sleep, gmtime, strftime
 from Defaults.base_functions import *
+from os import listdir, remove
+import re
 
 class base_functions(object):
 	"""Base Functions
@@ -71,6 +73,18 @@ class base_functions(object):
 		ch2 = '~' not in possibleTitle
 		return ch1 * ch2
 
+
+	@staticmethod
+	def _resetNotes():
+		removalCounter = 0
+		for x in listdir():
+			if re.match('Note-..md', x):
+				remove(x)
+				removalCounter += 1
+
+		print('{} items removed'.format(removalCounter))
+
 if __name__ == '__main__':
-	from tests.base_functions_tests import *
-	main(base_functions_unit_test.run())
+	# from tests.base_functions_tests import *
+	# main(base_functions_unit_test.run())
+	base_functions._resetNotes()
