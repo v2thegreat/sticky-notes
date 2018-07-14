@@ -85,6 +85,4 @@ class base_functions(object):
 		print('{} items removed'.format(removalCounter))
 
 if __name__ == '__main__':
-	# from tests.base_functions_tests import *
-	# main(base_functions_unit_test.run())
 	base_functions._resetNotes()
