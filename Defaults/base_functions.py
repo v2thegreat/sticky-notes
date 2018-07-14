@@ -1,2 +1,4 @@
 DFLT_FILE_NAME_FORMAT = "Note-{0}.{1}"
 DFLT_TIME_STAMP_FORMAT = "%Y-%m-%d ~ %H:%M:%S"
+MTCH_STR_MARKDOWN = 'Note-..md'
+MTCH_STR_HTML = 'Note-..HTML'

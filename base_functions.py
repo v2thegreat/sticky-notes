@@ -78,7 +78,7 @@ class base_functions(object):
 	def _resetNotes():
 		removalCounter = 0
 		for x in listdir():
-			if re.match('Note-..md', x):
+			if re.match(MTCH_STR_MARKDOWN, x) or re.match(MTCH_STR_HTML, x):
 				remove(x)
 				removalCounter += 1
 
