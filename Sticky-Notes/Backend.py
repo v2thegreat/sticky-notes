@@ -2,12 +2,11 @@ from os import startfile, stat
 from time import sleep, gmtime, strftime
 from PyQt5 import QtWidgets
 from Defaults.UI_Defaults import *
-from UI import stickyNotesUI
+from UI.UI import stickyNotesUI
 from markdown_functionality import markdown_functionality
 from threading_functions import threading_functions
 
 class Backend(markdown_functionality, threading_functions, stickyNotesUI):
-	"""docstring for Backend"""
 
 	def __init__(self):
 		super().__init__()
@@ -20,6 +19,9 @@ class Backend(markdown_functionality, threading_functions, stickyNotesUI):
 
 
 	def _setFunctionality(self):
+		"""
+		Function to setup functionality for all UI Widgets
+		"""
 		print('Setting up button functionality')
 		self._setLabels()
 		self.lblNote_1.mousePressEvent = (lambda x: self.updateNote(0))
